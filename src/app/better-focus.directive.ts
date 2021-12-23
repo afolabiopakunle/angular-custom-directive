@@ -10,8 +10,8 @@ export class BetterFocusDirective implements AfterViewInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.renderer.setAttribute(this.elementRef.nativeElement, 'background-color', 'green')
-    })
+      this.renderer.selectRootElement(this.elementRef.nativeElement.focus())
+    }, 500)
 
   }
 }
